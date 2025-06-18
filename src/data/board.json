@@ -1,0 +1,72 @@
+{
+  "columns": [
+    {
+      "id": "todo",
+      "title": "To Do",
+      "taskIds": [
+        "6",
+        "4"
+      ]
+    },
+    {
+      "id": "in-progress",
+      "title": "In Progress",
+      "taskIds": [
+        "5",
+        "2",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "taskIds": [
+        "1",
+        "3"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Sample Task",
+      "description": "This is a demo"
+    },
+    {
+      "id": "2",
+      "title": "Sample Task 2",
+      "description": "This is a demo 2"
+    },
+    {
+      "id": "3",
+      "title": "Sample Task 3",
+      "description": "This is a demo 3"
+    },
+    {
+      "id": "4",
+      "title": "Sample Task 4",
+      "description": "This is a demo 4"
+    },
+    {
+      "id": "5",
+      "title": "Sample Task 5",
+      "description": "This is a demo 5"
+    },
+    {
+      "id": "6",
+      "title": "Sample Task 6",
+      "description": "This is a demo 6"
+    },
+    {
+      "id": "7",
+      "title": "Sample Task 7",
+      "description": "This is a demo 7"
+    },
+    {
+      "id": "8",
+      "title": "Sample Task 8",
+      "description": "This is a demo 8"
+    }
+  ]
+}
