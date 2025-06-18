@@ -26,12 +26,34 @@ body {
 }
 
 @layer components{
-  .loading{
-    @apply text-center text-2xl font-bold text-gray-500;
-  }
-  .board{
-    @apply grid grid-cols-3 gap-4 p-4;
-  } 
+  /* common components styling start */
+  .btn {
+      @apply px-4 py-2 rounded transition-colors cursor-pointer;
+    }
+    .btn--primary {
+      @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+    .loading{
+      @apply text-center text-2xl font-bold text-gray-500;
+    }
+    .board{
+      @apply grid grid-cols-3 gap-4 p-4;
+    }
+    .popup__outer{
+      @apply fixed top-0 left-0 flex justify-center items-center z-50 bg-[#b4b4b4];
+      width: 100vw;
+      height: 100vh;
+    }
+    .popup__inner{
+      @apply bg-white p-6 rounded-lg shadow-lg max-w-md w-full;
+    }
+    .popup__title{
+      @apply text-2xl font-semibold mb-4 text-center;
+    }
+    .inputField{
+      @apply w-full p-2 border border-gray-300 rounded focus:outline-blue-500 my-1;
+    }
+  /* common components styling end */
   .list__Container{
     @apply flex flex-col items-stretch;
   }
@@ -41,5 +63,7 @@ body {
   .list_innerContainer{
     @apply flex flex-col gap-2 bg-gray-300 p-2 rounded-xl h-full;
   }
-
+  .task__delete{
+    @apply absolute top-0 right-0 px-1.5 text-center text-red-500 cursor-pointer;
+  }
 }
