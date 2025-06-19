@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { act } from "react";
 
 export const fetchBoard = createAsyncThunk("fetchBoard", async () => {
   const res = await fetch("/api/board");
@@ -50,15 +51,17 @@ const boardSlice = createSlice({
         state.loading = true;
       })
       .addCase(addNewColumn.fulfilled, (state, action) => {
-        state.columns.push(action.payload);
+        state.columns = [...action.payload.data.columns];
+        state.tasks = [...action.payload.data.tasks];
         state.loading = false;
       })
       .addCase(addNewTask.pending, (state) => {
         state.loading = true;
       })
       .addCase(addNewTask.fulfilled, (state, action) => {
-        state.columns = action.payload.columns;
-        state.tasks = action.payload.tasks;
+        console.log("addNewTask", action.payload);
+        state.columns = [...action.payload.data.columns];
+        state.tasks = [...action.payload.data.tasks];
         state.loading = false;
       })
       .addCase(deleteTask.pending, (state) => {
