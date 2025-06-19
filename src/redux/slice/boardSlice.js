@@ -68,8 +68,8 @@ const boardSlice = createSlice({
         state.loading = true;
       })
       .addCase(deleteTask.fulfilled, (state, action) => {
-        state.columns = action.payload.columns;
-        state.tasks = action.payload.tasks;
+        state.columns = action.payload.data.columns;
+        state.tasks = action.payload.data.tasks;
         state.loading = false;
       })
   },
